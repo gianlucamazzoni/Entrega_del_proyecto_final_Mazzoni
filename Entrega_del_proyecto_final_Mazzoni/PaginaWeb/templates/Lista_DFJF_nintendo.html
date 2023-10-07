@@ -1,0 +1,9 @@
+{% extends 'padre.html' %}
+
+{% block CosaQueCambia %}
+    <ul>
+        {% for Lista in Listar_DFJF_nintendo %}
+            <li>{{Lista.Desarrolladora}} - {{Lista.Fecha_de_inauguración}} - {{Lista.Juego}} - {{Lista.Fecha_de_salida}}</li>
+        {% endfor %}
+    </ul>
+{% endblock CosaQueCambia %}

@@ -1,0 +1,20 @@
+{% extends 'padre.html' %}
+
+{% block CosaQueCambia %}
+    <ul>
+        {% for Playstation in Lista %}
+            <li>
+                <a href="{% url 'Playstation_Detail' Playstation.id %}">{{Playstation.Desarrolladora}} - {{Playstation.Fecha_de_inauguración}} - {{Playstation.Juego}} - {{Playstation.Fecha_de_salida}}</a>
+            </li>
+            <div style="display: flex; column-gap: 5px;">
+                <button>
+                    <a href="{% url 'Playstation_Delete' Playstation.id %}">Eliminar</a>
+                </button>
+                <button>
+                    <a href="{% url 'Playstation_Update' Playstation.id %}">Editar</a>
+                </button>
+            </div>
+        {% endfor %}
+    </ul>
+
+{% endblock CosaQueCambia %}

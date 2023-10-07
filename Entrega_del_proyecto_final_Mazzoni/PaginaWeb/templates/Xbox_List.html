@@ -1,0 +1,20 @@
+{% extends 'padre.html' %}
+
+{% block CosaQueCambia %}
+    <ul>
+        {% for Xbox in Lista %}
+            <li>
+                <a href="{% url 'Xbox_Detail' Xbox.id %}"> {{Xbox.Desarrolladora}} - {{Xbox.Fecha_de_inauguración}} - {{Xbox.Juego}} - {{Xbox.Fecha_de_salida}} </a>
+            </li>
+            <div style="display: flex; column-gap: 5px;">
+                <button>
+                    <a href="{% url 'Xbox_Delete' Xbox.id %}">Eliminar</a>
+                </button>
+                <button>
+                    <a href="{% url 'Xbox_Update' Xbox.id %}">Editar</a>
+                </button>
+            </div>
+        {% endfor %}
+    </ul>
+
+{% endblock CosaQueCambia %}

@@ -1,0 +1,12 @@
+{% extends 'padre.html' %}
+
+
+{% block CosaQueCambia %}
+    <form action="{% url 'Agregar_avatar' %}" enctype="multipart/form-data" method="post">{% csrf_token %}
+        
+        {{miFormulario.as_p}}
+
+        <button type="submit"> Enviar</button>
+    </form>
+
+{% endblock CosaQueCambia %}

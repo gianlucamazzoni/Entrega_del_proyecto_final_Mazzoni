@@ -1,0 +1,18 @@
+{% extends 'padre.html' %}
+
+{% block CosaQueCambia %}
+    <ul>
+        {% for Playstation in Juego %}
+            <li>{{Playstation}}</li>
+            <div style="display: flex; column-gap: 5px;">
+                <form action="{% url 'EliminarJuegoPlay' Playstation.id %}" method="post">{% csrf_token %}
+                    <button type="submit"> Eliminar </button>
+                </form>
+                <button>
+                    <a href="{% url 'EditarJuegoPlay' Playstation.id %}">Editar</a>
+                </button>
+            </div>
+        {% endfor %}
+    </ul>
+
+{% endblock CosaQueCambia %}

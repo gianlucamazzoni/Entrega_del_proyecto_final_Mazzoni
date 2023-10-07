@@ -1,0 +1,14 @@
+{% extends 'padre.html' %}
+
+
+{% block CosaQueCambia %}
+    <div style="display: flex; column-gap: 5px;"></div>
+    <form action="{% url 'Xbox_Delete' Lista.id %}" method="post">{% csrf_token %}
+        
+        <p>Está seguro que qiere eliminar la desarroladora y el juego?</p>
+
+        <button type="submit">Confirmar</button>
+        <button><a href="{% url 'Inicio' %}"> Cancelar </a> </button>
+    </form>
+
+{% endblock CosaQueCambia %}

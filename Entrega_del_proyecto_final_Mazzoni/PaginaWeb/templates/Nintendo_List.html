@@ -1,0 +1,20 @@
+{% extends 'padre.html' %}
+
+{% block CosaQueCambia %}
+    <ul>
+        {% for Nintendo in Lista %}
+            <li>
+                <a href="{% url 'Nintendo_Detail' Nintendo.id %}"> {{Nintendo.Desarrolladora}} - {{Nintendo.Fecha_de_inauguración}} - {{Nintendo.Juego}} - {{Nintendo.Fecha_de_salida}} </a>
+            </li>
+            <div style="display: flex; column-gap: 5px;">
+                <button>
+                    <a href="{% url 'Nintendo_Delete' Nintendo.id %}">Eliminar</a>
+                </button>
+                <button>
+                    <a href="{% url 'Nintendo_Update' Nintendo.id %}">Editar</a>
+                </button>
+            </div>
+        {% endfor %}
+    </ul>
+
+{% endblock CosaQueCambia %}

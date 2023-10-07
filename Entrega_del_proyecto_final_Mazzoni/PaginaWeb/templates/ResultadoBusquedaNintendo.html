@@ -1,0 +1,12 @@
+{% extends 'padre.html' %}
+
+{% block CosaQueCambia %}
+    <P>Resultado de la busqueda de la desarrolladora y juego</P>
+    {% if Lista %}  
+        <ul>
+            {% for Desarrolladora in Lista %}
+                <li>{{Desarrolladora}}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}  
+{% endblock CosaQueCambia %}

@@ -1,0 +1,10 @@
+{% extends 'padre.html' %}
+
+{% block CosaQueCambia %}
+    <form action="{% url 'BuscarPlay' %}" method="get">
+        
+        <p>Desarrolladora: <input type="text" name="Desarrolladora"></p>
+
+        <button type="submit"> Enviar</button>
+    </form>
+{% endblock CosaQueCambia %}
