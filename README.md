@@ -1,4 +1,4 @@
-# Entrega_del_proyecto_final_Mazzoni
+# Entrega_del_proyecto_final_Gianluca_Mazzoni
 proyecto final del curso de python orientado en desarrollo web
 link video: https://youtu.be/TDSa4PLst1Q
 
